@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of Francisco Aguirre. | Wdd231 BYU-I class.">
+    <meta name="author" content="Francisco J. Aguirre">
+    <title>Francisco J. Aguirre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="profile-container">
+            <div class="profile-photo">
+                <img src="images/profile.JPG" alt="Francisco Aguirre">
+            </div>
+            <span>Francisco J. Aguirre</span>
+        </div>
+        <nav>
+            <button id="menu-toggle">☰</button>
+            <ul id="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">GitHub Profile</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="layout">  
+        <section class="courses">
+            <h1>Home</h1>
+            <h2>Course Work</h2>
+            <ul id="course-list">
+                <li>•</li>
+                <li>•</li>
+                <li>•</li>
+            </ul>
+        </section>    
+        <section class="country">
+            <h2>Roatan, Honduras</h2>
+            <img src="images/honduras-beach.jpg" alt="Roatan Beach">
+            <p>Caribiean beach in Honduras</p>
+        </section>   
+        <section class="courses-completed">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div id="course-filters">
+                <button data-filter="all">All</button>
+                <button data-filter="CSE">CSE</button>
+                <button data-filter="WDD">WDD</button>
+            </div>
+            <div id="courses-container"></div>
+            <p>Total Credits: <span id="total-credits"></span></p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Francisco J. Aguirre 🤖 Barcelona, Spain</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

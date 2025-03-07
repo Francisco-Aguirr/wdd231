@@ -1,0 +1,186 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    justify-content: space-around; /* Alinea el contenido a la izquierda */
+    padding-left: 20px; /* Espaciado a la izquierda */
+}
+
+.profile-container img {
+    width: 90px;
+    height: 90px;
+    margin-right: 15px;
+}
+
+.profile-photo{
+    padding-right: 15px;
+}
+.profile-container span {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Separa el menú y el botón hamburguesa */
+    align-items: center;
+    padding: 0 20px; /* Espaciado a los lados */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #ffcc00; /* Cambia el color al pasar el mouse */
+}
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        justify-content: space-between; /* Separa la imagen y el botón */
+        padding-right: 20px; /* Espaciado a la derecha */
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #003366;
+        position: absolute;
+        top: 100px;
+        right: 10px;
+        width: 150px;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    nav ul.show {
+        display: flex;
+    }
+    #menu-toggle {
+        display: block;
+    }
+}
+
+main {
+    padding: 10px;
+}
+
+h1, h2 {
+    color: #003366;
+}
+
+#courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding-top: 5px;
+}
+
+.course {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.completed {
+    background-color: lightgreen;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+/*css grid main section*/
+.layout {
+    width: 100%;
+    display: grid;
+    grid:
+      "courses" auto
+      "country" auto
+      "courses-completed" auto
+      / 1fr; /* Una sola columna */
+    gap: 5px;
+    padding: 5px;
+}
+
+
+/* Estilos comunes para todas las cards */
+.courses, .country, .courses-completed {
+    background-color: #fff; /* Fondo blanco */
+    border: 1px solid #ddd; /* Borde suave */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Estilos específicos para cada sección */
+.courses { grid-area: courses; }
+.country { grid-area: country; }
+.courses-completed { grid-area: courses-completed; }
+
+/* Estilos adicionales para la imagen en la sección country */
+.country img {
+    width: 100%; /* La imagen ocupa todo el ancho de la card */
+    border-radius: 8px; /* Esquinas redondeadas para la imagen */
+    margin-top: 8px; /* Espaciado arriba de la imagen */
+}
+
+/* Estilos para los botones en courses-completed */
+#course-filters button {
+    background-color: #013974; /* Color de fondo azul */
+    color: #fff; /* Texto blanco */
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-right: 8px; /* Espaciado entre botones */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+#course-filters button:hover {
+    background-color: #0056b3; /* Color azul más oscuro al pasar el mouse */
+}
+/* Media query para pantallas más grandes (desktop) */
+@media (min-width: 768px) {
+    .layout {
+        grid:
+          "courses country" auto
+          "courses-completed courses-completed" auto
+          / 1fr 1fr; /* Dos columnas de igual ancho */
+    }
+}
