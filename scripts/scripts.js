@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     currentYear.textContent = new Date().getFullYear();
     
     // Set last modified date dynamically
-    lastModified.textContent = "Last Update: " + document.lastModified;
+    lastModified.textContent = "Last Modified: " + document.lastModified;
 
     // Course data
     const courses = [
