@@ -1,0 +1,14 @@
+/* Larger Screen Styles */
+@media (min-width: 768px) {
+    #member-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #menu-toggle {
+        display: none; /* Hide hamburger button on larger screens */
+    }
+
+    nav ul {
+        display: flex; /* Show navigation menu on larger screens */
+    }
+}

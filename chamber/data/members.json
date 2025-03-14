@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Acme Corporation",
+        "address": "123 Main St, City, State",
+        "phone": "(123) 456-7890",
+        "website": "https://businessone.com",
+        "image": "acme.jpeg",
+        "width": 300,
+        "height": 200,
+        "membershipLevel": "Gold"
+    },
+    {
+        "name": "Bio Mord",
+        "address": "456 Elm St, City, State",
+        "phone": "(234) 567-8901",
+        "website": "https://businesstwo.com",
+        "image": "bioMord.png",
+        "width": 300,
+        "height": 200,
+        "membershipLevel": "Silver"
+    },
+    {
+        "name": "Enviro Corp.",
+        "address": "789 Oak St, City, State",
+        "phone": "(345) 678-9012",
+        "website": "https://businessthree.com",
+        "image": "enviro.jpeg",
+        "width": 300,
+        "height": 200,
+        "membershipLevel": "Non-Profit"
+    },
+    {
+        "name": "Nuvem Films",
+        "address": "101 Pine St, City, State",
+        "phone": "(456) 789-0123",
+        "website": "https://businessfour.com",
+        "image": "nuvemFilms.jpeg",
+        "width": 300,
+        "height": 200,
+        "membershipLevel": "Gold"
+    },
+    {
+        "name": "Planet Express",
+        "address": "202 Maple St, City, State",
+        "phone": "(567) 890-1234",
+        "website": "https://businessfive.com",
+        "image": "planetExpres.jpeg",
+        "width": 300,
+        "height": 200,
+        "membershipLevel": "Silver"
+    },
+    {
+        "name": "Pollos Hermanos",
+        "address": "303 Cedar St, City, State",
+        "phone": "(678) 901-2345",
+        "website": "https://businesssix.com",
+        "image": "pollosHermanos.jpeg",
+        "width": 300,
+        "height": 200,
+        "membershipLevel": "Non-Profit"
+    },
+    {
+        "name": "Umbrella Academy",
+        "address": "404 Birch St, City, State",
+        "phone": "(789) 012-3456",
+        "website": "https://businessseven.com",
+        "image": "umbrela.jpeg",
+        "width": 300,
+        "height": 200,
+        "membershipLevel": "Gold"
+    }
+]

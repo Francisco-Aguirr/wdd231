@@ -1,0 +1,159 @@
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #4a148c;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+#menu-toggle {
+    display: none; /* Hide by default */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+#view-toggle {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+#view-toggle button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+#member-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+img {
+    max-width: 100%; /* Ensure images don’t exceed their container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+.member-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.member-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* List View Styles */
+#member-container.list-view {
+    display: block;
+}
+
+#member-container.list-view .member-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    background-color: white;
+}
+
+#member-container.list-view .member-card:nth-child(odd) {
+    background-color: #f9f9f9; /* Zebra striping */
+}
+
+#member-container.list-view .member-card img {
+    max-width: 100px; /* Limit image width in list view */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+}
+
+#member-container.list-view .member-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+#member-container.list-view .member-card p {
+    margin: 0.5rem 0;
+}
+/* Hamburger Menu Styles for Small Screens */
+@media (max-width: 767px) {
+    #menu-toggle {
+        display: block; /* Show the hamburger button */
+    }
+
+    nav ul {
+        display: none; /* Hide the navigation menu by default */
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    nav ul.active {
+        display: flex; /* Show the navigation menu when active */
+    }
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+/* Larger Screen Styles */
+@media (min-width: 768px) {
+    #member-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #menu-toggle {
+        display: none; /* Hide hamburger button on larger screens */
+    }
+
+    nav ul {
+        display: flex; /* Show navigation menu on larger screens */
+    }
+}
