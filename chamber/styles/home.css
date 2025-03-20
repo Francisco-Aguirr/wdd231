@@ -1,0 +1,243 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos generales para la barra de navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Estilos para el botón de menú hamburguesa */
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    top: 8px;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f7a269;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Contenedor de Eventos, Clima y Pronóstico */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilos para Eventos, Clima y Pronóstico */
+.events, .weather, .forecast {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* Estilos para la sección del clima */
+
+.weather-content {
+    display: flex; /* Usamos Flexbox para alinear la imagen y el texto */
+    align-items: center; /* Centra verticalmente los elementos */
+    gap: 15px; /* Espacio entre la imagen y el texto */
+}
+
+.weather-content img {
+    width: 50px; /* Tamaño de la imagen SVG */
+    height: 50px;
+}
+
+.weather-info {
+    flex: 1; /* El texto ocupa el espacio restante */
+}
+
+.weather-info h2 {
+    margin: 0 0 10px 0; /* Espaciado inferior para el título */
+}
+
+#weather-data p {
+    margin: 5px 0; /* Espaciado entre los párrafos de datos del clima */
+}
+
+/* Sección de Miembros Destacados */
+.spotlights {
+    padding: 20px;
+}
+
+#spotlight-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostrar el botón en móviles */
+    }
+
+    .nav-menu {
+        display: none; /* Ocultar el menú por defecto en móviles */
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 114px; /* Ajusta según la altura del header */
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Mostrar el menú cuando está activo */
+    }
+    nav ul li {
+        display: block;
+        text-align: right;
+        margin: 10px 20px;
+    }
+
+    .hero img {
+        height: 200px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    header {
+        padding: 10px; /* Reducir el padding para pantallas muy pequeñas */
+    }
+
+    .nav-menu {
+        top: 50px; /* Ajustar la posición del menú desplegable */
+    }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+        width: 20px; /* Reducir el tamaño del ícono hamburguesa */
+    }
+
+    .hamburger::before {
+        top: -6px;
+    }
+
+    .hamburger::after {
+        top: 6px;
+    }
+}
+
+/* Estilos para el Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 2px solid #ff6600; /* Línea superior naranja */
+}
+
+footer p {
+    margin: 5px 0; /* Espaciado entre párrafos */
+    font-size: 14px;
+}
+
+footer a {
+    color: #ff6600; /* Color naranja para los enlaces */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
