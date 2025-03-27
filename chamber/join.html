@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join - Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="scripts/join.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/card-image.svg" alt="">
+        <button class="menu-toggle" aria-label="menu">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="form-container">
+        <form id="membershipForm" method="get" action="thankyou.html">
+            <h2>Membership Application</h2>
+            
+            <label for="firstName">First Name*
+                <input type="text" id="firstName" name="firstName" required 
+                       title="Enter your first name" autocomplete="given-name">
+            </label>
+            
+            <label for="lastName">Last Name*
+                <input type="text" id="lastName" name="lastName" required
+                       title="Enter your last name" autocomplete="family-name">
+            </label>
+            
+            <label for="title">Organization Title
+                <input type="text" id="title" name="title" 
+                       title="Your position in the organization" 
+                       autocomplete="organization-title"
+                       pattern="[a-zA-Z\s\-]{7,}">
+            </label>
+            
+            <label for="email">Email*
+                <input type="email" id="email" name="email" required
+                       title="Enter a valid email address" 
+                       autocomplete="email"
+                       placeholder="example@domain.com">
+            </label>
+            
+            <label for="phone">Mobile Phone*
+                <input type="tel" id="phone" name="phone" required
+                       title="Enter your mobile phone number"
+                       autocomplete="tel">
+            </label>
+            
+            <label for="orgName">Business/Organization Name*
+                <input type="text" id="orgName" name="orgName" required
+                       title="Enter your business name"
+                       autocomplete="organization">
+            </label>
+            
+            <label for="membership">Membership Level*
+                <select id="membership" name="membership" required
+                        title="Select a membership level">
+                    <option value="">-- Select --</option>
+                    <option value="np">NP Membership (Non-Profit, Free)</option>
+                    <option value="bronze">Bronze Membership ($100/year)</option>
+                    <option value="silver">Silver Membership ($200/year)</option>
+                    <option value="gold">Gold Membership ($300/year)</option>
+                </select>
+            </label>
+            
+            <label for="description">Business Description
+                <textarea id="description" name="description" 
+                          title="Describe your business"></textarea>
+            </label>
+            
+            <input type="hidden" id="timestamp" name="timestamp">
+            
+            <button type="submit">Submit Application</button>
+        </form>
+
+        <div class="membership-cards">
+            <div class="card" id="np-card">
+                <h3>NP Membership</h3>
+                <p>For non-profit organizations (no fee)</p>
+                <a href="#np-modal" class="modal-link">View Benefits</a>
+            </div>
+            
+            <div class="card" id="bronze-card">
+                <h3>Bronze Membership</h3>
+                <p>$100/year</p>
+                <a href="#bronze-modal" class="modal-link">View Benefits</a>
+            </div>
+            
+            <div class="card" id="silver-card">
+                <h3>Silver Membership</h3>
+                <p>$200/year</p>
+                <a href="#silver-modal" class="modal-link">View Benefits</a>
+            </div>
+            
+            <div class="card" id="gold-card">
+                <h3>Gold Membership</h3>
+                <p>$300/year</p>
+                <a href="#gold-modal" class="modal-link">View Benefits</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modals -->
+    <div id="np-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>NP Membership Benefits</h3>
+            <ul>
+                <li>Free listing in our directory</li>
+                <li>Access to member-only events</li>
+                <li>Monthly newsletter</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="bronze-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Bronze Membership Benefits</h3>
+            <ul>
+                <li>All NP benefits plus:</li>
+                <li>10% discount on events</li>
+                <li>Basic training sessions</li>
+                <li>Business listing with logo</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="silver-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Silver Membership Benefits</h3>
+            <ul>
+                <li>All Bronze benefits plus:</li>
+                <li>25% discount on events</li>
+                <li>Advanced training sessions</li>
+                <li>Featured in newsletter twice/year</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="gold-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Gold Membership Benefits</h3>
+            <ul>
+                <li>All Silver benefits plus:</li>
+                <li>50% discount on events</li>
+                <li>VIP access to special events</li>
+                <li>Homepage spotlight rotation</li>
+                <li>Priority support</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; </p>
+        <p></p>
+    </footer>
+</body>
+</html>

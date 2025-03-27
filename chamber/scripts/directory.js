@@ -44,17 +44,24 @@ fetchMembers().then(members => displayMembers(members));
 document.getElementById('copyright-year').textContent = new Date().getFullYear();
 document.getElementById('last-modified').textContent = document.lastModified;
 
-// Toggle the hamburger menu
-const menuToggle = document.getElementById('menu-toggle');
-const navMenu = document.getElementById('nav-menu');
+const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const hamburger = document.querySelector('.hamburger');
 
-menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
-
-// Close the menu when a link is clicked (optional)
-navMenu.addEventListener('click', () => {
-    if (window.innerWidth <= 767) {
-        navMenu.classList.remove('active');
-    }
-});
+    menuToggle.addEventListener('click', function() {
+        // Alternar clases
+        navMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        hamburger.classList.toggle('active');
+        
+        // Opcional: Cerrar menú al hacer clic en un enlace
+        if (navMenu.classList.contains('active')) {
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                    hamburger.classList.remove('active');
+                });
+            });
+        }
+    });

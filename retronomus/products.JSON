@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "name": "Walkman Stereo",
+        "description": "Relive the 80s with this iconic Walkman. Perfect for cassette lovers.",
+        "price": 49.99,
+        "image": "images/walkman.webp",
+        "category": "Music"
+    },
+    {
+        "id": 2,
+        "name": "Vintage Camera",
+        "description": "Capture memories with this classic 35mm camera. A must-have for photography enthusiasts.",
+        "price": 79.99,
+        "image": "images/cammera.webp",
+        "category": "Photography"
+    },
+    {
+        "id": 3,
+        "name": "Super Nintendo",
+        "description": "The legendary Super Nintendo console. A piece of gaming history.",
+        "price": 119.99,
+        "image": "images/super-nintendo.webp",
+        "category": "Gaming"
+    },
+    {
+        "id": 4,
+        "name": "Cassette Tapes Collection",
+        "description": "A curated collection of classic cassette tapes, featuring some of the greatest albums of the 80s.",
+        "price": 29.99,
+        "image": "images/cassetes.webp",
+        "category": "Music"
+    },
+    {
+        "id": 5,
+        "name": "Portable CD Player",
+        "description": "Take your music anywhere with this retro portable CD player, perfect for the 90s music lovers.",
+        "price": 69.99,
+        "image": "images/discmanwalkman.webp",
+        "category": "Music"
+    },
+    {
+        "id": 6,
+        "name": "Old-School VHS Tape",
+        "description": "Experience nostalgia with classic VHS tapes. Relive the 80s and 90s with your favorite movies.",
+        "price": 14.99,
+        "image": "images/vhs.webp",
+        "category": "Movies"
+    },
+    {
+        "id": 7,
+        "name": "Portable Floppy Disk Drive",
+        "description": "A retro portable floppy disk drive for all your old data storage needs.",
+        "price": 39.99,
+        "image": "images/flopydisc.webp",
+        "category": "Technology"
+    },
+    {
+        "id": 8,
+        "name": "Retro Video Game Controller",
+        "description": "A vintage controller for your classic gaming console. Perfect for retro gaming lovers.",
+        "price": 19.99,
+        "image": "images/controller.webp",
+        "category": "Gaming"
+    },
+    {
+        "id": 9,
+        "name": "Arcade Machine Mini",
+        "description": "Miniature arcade machine with built-in games. Enjoy your favorite retro arcade games at home.",
+        "price": 129.99,
+        "image": "images/arcade-mini.webp",
+        "category": "Gaming"
+    },
+    {
+        "id": 10,
+        "name": "MP3 Player",
+        "description": "A classic MP3 player, perfect for listening to your favorite songs.",
+        "price": 89.99,
+        "image": "images/mp3.webp",
+        "category": "Music",
+        "year": 2000
+    }
+]

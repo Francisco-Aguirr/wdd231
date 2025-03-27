@@ -1,0 +1,27 @@
+.thankyou-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.user-data {
+    background: white;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    text-align: left;
+}
+
+.user-data p {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.user-data p:last-child {
+    border-bottom: none;
+}
