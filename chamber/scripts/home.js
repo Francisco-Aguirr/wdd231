@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     lastModifiedElement.textContent = `Last Modified: ${formattedDate}`;
 
+
     // Cargar datos del clima actual y pronóstico
     const apiKey = '66a337a51d78b27c19d884cdbbb4b229'; 
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=Timbuktu&units=metric&appid=${apiKey}`;
