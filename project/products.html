@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our collection of vintage technology and retro gaming products">
+    <title>Products | Retronomus</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- scripts -->
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/cart.js" defer></script>
+    <script src="scripts/products.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Retronomus</h1>
+                <p>Vintage Tech Marketplace</p>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <nav class="primary-nav">
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <a href="cart.html" class="cart-icon" aria-label="Shopping Cart">
+                    <span id="cart-count">0</span>
+                    🛒
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="products-header">
+            <div class="container">
+                <h1>Our Vintage Collection</h1>
+                <div class="filter-controls">
+                    <select id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="computers">Vintage Computers</option>
+                        <option value="consoles">Gaming Consoles</option>
+                        <option value="accessories">Accessories</option>
+                        <option value="games">Games</option>
+                    </select>
+                    <select id="sort-by">
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="name-asc">Name: A-Z</option>
+                        <option value="name-desc">Name: Z-A</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="all-products">
+            <div class="container">
+                <div class="product-grid" id="all-products">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Retronomus</h3>
+                    <p>Preserving tech history one device at a time</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul class="social-links">
+                        <li><a href="#" aria-label="Twitter">Twitter</a></li>
+                        <li><a href="#" aria-label="Facebook">Facebook</a></li>
+                        <li><a href="#" aria-label="Instagram">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Retronomus. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Same modal as index.html -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body" id="modal-body">
+                <!-- Modal content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

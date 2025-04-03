@@ -1,0 +1,102 @@
+[
+    {
+        "id": "1",
+        "name": "Arcade Mini",
+        "price": 199.99,
+        "condition": "Good",
+        "category": "games",
+        "description": "The classic home computer from 1982 with 64KB RAM.",
+        "image": {
+            "src": "images/arcade-mini.webp",
+            "width": 400,
+            "height": 300,
+            "alt": "Commodore 64 computer"
+        },
+        "specs": {
+            "year": 1982,
+            "manufacturer": "Commodore",
+            "originalPrice": "$595",
+            "processor": "MOS Technology 6510"
+        }
+    },
+    {
+        "id": "2",
+        "name": "Vintage Cammera",
+        "price": 149.99,
+        "condition": "Fair",
+        "category": "consoles",
+        "description": "The iconic Polaroid Instant Cammera released in 1947.",
+        "image": {
+            "src": "images/cammera.webp",
+            "width": 400,
+            "height": 300,
+            "alt": "Instant Polaroid Cammera"
+        },
+        "specs": {
+            "year": 1977,
+            "manufacturer": "Polaroid",
+            "originalPrice": "$199",
+            "processor": "MOS 6507"
+        }
+    },
+    {
+        "id": "3",
+        "name": "Super Nintendo",
+        "price": 149.99,
+        "condition": "Fair",
+        "category": "consoles",
+        "description": "The iconic video game console released in 1990.",
+        "image": {
+            "src": "images/super-nintendo.webp",
+            "width": 400,
+            "height": 300,
+            "alt": "Super Nintendo game console"
+        },
+        "specs": {
+            "year": 1990,
+            "manufacturer": "Nintendo",
+            "originalPrice": "$199",
+            "processor": "MOS 6507"
+        }
+    },
+    {
+        "id": "4",
+        "name": "Sony Walkman",
+        "price": 130.99,
+        "condition": "Good",
+        "category": "accessories",
+        "description": "The gratest cassete player released in 1979.",
+        "image": {
+            "src": "images/walkman.webp",
+            "width": 400,
+            "height": 300,
+            "alt": "Sony Walkman 1980"
+        },
+        "specs": {
+            "year": 1979,
+            "manufacturer": "Sony",
+            "originalPrice": "$199",
+            "processor": "Unknown"
+        }
+    },
+    {
+        "id": "5",
+        "name": "Sony Discman",
+        "price": 109.99,
+        "condition": "Like New",
+        "category": "accessories",
+        "description": "The gratest CD player released in 1985.",
+        "image": {
+            "src": "images/discmanwalkman.webp",
+            "width": 400,
+            "height": 300,
+            "alt": "Sony Discman 1985"
+        },
+        "specs": {
+            "year": 1985,
+            "manufacturer": "Sony",
+            "originalPrice": "$109.99",
+            "processor": "Undefined"
+        }
+    }
+]

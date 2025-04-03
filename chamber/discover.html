@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chamber of Commerce Discover Page - Discover local businesses and organizations in our community.">
+    <meta name="author" content="Francisco Javier Aguirre">
+    <meta property="og:title" content="Chamber of Commerce Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://francisco-aguirr.github.io/wdd231/chamber/images/barceloneta.webp">
+    <meta property="og:url" content="https://francisco-aguirr.github.io/wdd231/chamber/discover.html">
+    <title>Discover - Chamber of Commerce</title>
+    <link rel="icon" href="images/favicon.ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/discover.css">
+    <script src="scripts/discover.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/card-image.svg" alt="replace an icon" width="50px" height="50px">
+        <button class="menu-toggle" aria-label="menu">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="#" class="active">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <aside class="sidebar">
+            <div id="visit-message"></div>
+        </aside>
+
+        <section class="gallery">
+            <!-- Tarjetas generadas por JavaScript -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="copyright-year"></span> Chamber of Commerce | Francisco Aguirre</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>

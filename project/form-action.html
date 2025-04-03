@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submitted | Retronomus</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- scripts -->
+    <script src="scripts/form-action.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Retronomus</h1>
+                <p>Vintage Tech Marketplace</p>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <nav class="primary-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <span id="cart-count">0</span>
+                🛒
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-confirmation">
+            <div id="form-data-display">
+                <h3>Thank you for your message!</h3>
+                <p>We'll get back to you soon.</p>
+                <div class="submitted-data">
+                    <!-- Data will be inserted here by JavaScript -->
+                </div>
+                <a href="index.html" class="btn">Return Home</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Retronomus</h3>
+                    <p>Preserving tech history one device at a time</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul class="social-links">
+                        <li><a href="#" aria-label="Twitter">Twitter</a></li>
+                        <li><a href="#" aria-label="Facebook">Facebook</a></li>
+                        <li><a href="#" aria-label="Instagram">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Retronomus. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Port Vell",
+        "address": "Pg. de Joan de Borbó, 64, Ciutat Vella, Barcelona",
+        "description": "A beautiful urban port perfect for iconics views.",
+        "image": "images/portvell.webp",
+        "width": 800,
+        "height": 600,
+        "website": "https://portvellbcn.cat/es/"
+    },
+    {
+        "name": "La sagrada Familia",
+        "address": "Carrer de Mallorca, 401, L'Eixample, Barcelona",
+        "description": "Explore artifacts from ancient civilizations.",
+        "image": "images/sagradafamilia.webp",
+        "width": 800,
+        "height": 1000,
+        "website": "https://sagradafamilia.org/"
+    },
+    {
+        "name": "Barrio Gótico",
+        "address": "Ciutat Vella Barcelona",
+        "description": "The most emblematic and artistic district of the city.",
+        "image": "images/barrio-gotico.webp",
+        "width": 800,
+        "height": 533,
+        "website": "https://ajuntament.barcelona.cat/ciutatvella/es/el-distrito-y-sus-barrios/el-gotic"
+    },
+    {
+        "name": "Montjuic",
+        "address": "Distrito de Sants-Montjuïc, Barcelona",
+        "description": "Historic hill with cable car, harbor views and a park with a castle and museums.",
+        "image": "images/montjuic.webp",
+        "width": 800,
+        "height": 534,
+        "website": "https://ajuntament.barcelona.cat/castelldemontjuic/ca"
+    },
+    {
+        "name": "Tibidabo",
+        "address": "Distrito de Sarrià-Sant Gervasi, Barcelona",
+        "description": "Mountain with an imposing cathedral, an amusement park with Ferris wheel and panoramic views of Barcelona",
+        "image": "images/tibidabo.webp",
+        "width": 800,
+        "height": 534,
+        "website": "https://tibidabo.cat/en"
+    },
+    {
+        "name": "La Barceloneta",
+        "address": "Ciutat Vella Barcelona",
+        "description": "Barceloneta is a seaside neighborhood where locals come to surf and sunbathe on the beach of Sant Sebastià.",
+        "image": "images/barceloneta.webp",
+        "width": 800,
+        "height": 534,
+        "website": "https://www.disfrutabarcelona.com/la-barceloneta"
+    },
+    {
+        "name": "Casa Batlló",
+        "address": "Pg. de Gràcia, 43, L'Eixample, Barcelona",
+        "description": "Building designed by Gaudí with a rooftop terrace, a fantastic facade that simulates the curves of a dragon and a museum.",
+        "image": "images/casa-batllo.webp",
+        "width": 800,
+        "height": 1000,
+        "website": "https://www.casabatllo.es/en/"
+    },
+    {
+        "name": "Aquarium Barcelona",
+        "address": "Moll d'Espanya del Port Vell, s/n, Barcelona ",
+        "description": "Visit L'Aquàrium de Barcelona and discover the amazing world of aquatic life. Enjoy family activities, shark dives, and learn about environmental education and conservation.",
+        "image": "images/aquarium-barcelona.webp",
+        "width": 800,
+        "height": 534,
+        "website": "https://www.aquariumbcn.com/"
+    }
+]

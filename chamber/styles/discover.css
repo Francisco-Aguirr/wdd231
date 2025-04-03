@@ -1,0 +1,62 @@
+/* Grid para tarjetas */
+.gallery {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Pequeñas pantallas (1 columna) */
+@media (min-width: 320px) and (max-width: 640px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    img {
+        height: auto;
+    }
+}
+
+/* Medianas pantallas (2 columnas) */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Grandes pantallas (3 columnas) */
+@media (min-width: 1025px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Efecto hover en imágenes (solo escritorio) */
+@media (hover: hover) and (min-width: 641px) {
+    img:hover {
+        transform: scale(1.03);
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Estilos de tarjeta */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.card button {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.sidebar {
+    background: #f4f4f4;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+}
