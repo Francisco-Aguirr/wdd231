@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
+    
     // Initialize cart count display
     updateCartCount();
     

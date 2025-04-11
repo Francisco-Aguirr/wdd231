@@ -131,6 +131,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 // Close modal function
                 const closeModal = () => {
+                    console.log("Cerrando modal");
                     modal.style.display = 'none';
                     document.removeEventListener('keydown', handleEscape);
                 };
@@ -139,10 +140,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const handleEscape = (e) => {
                     if (e.key === 'Escape') closeModal();
                 };
-
-                // Close when clicking X
-                modal.querySelector('.close-modal').addEventListener('click', closeModal);
                 
+                
+                // Close when clicking X
+                modal.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('close-modal')) {
+                        closeModal();
+                    }
+                });
                 // Close when clicking outside modal content
                 modal.addEventListener('click', (e) => {
                     if (e.target === modal) closeModal();
@@ -251,4 +256,5 @@ document.addEventListener('DOMContentLoaded', async () => {
     } catch (error) {
         console.error('Error initializing products:', error);
     }
+    
 });

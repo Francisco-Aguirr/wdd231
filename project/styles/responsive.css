@@ -12,7 +12,6 @@
         grid-template-columns: 1fr;
     }
 }
-
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -55,8 +54,10 @@
         margin-bottom: 1rem;
         width: 100%;
     }
+    footer {
+        min-height: 100px;
+    }
 }
-
 @media (max-width: 576px) {
     .hero {
         padding: 3rem 1rem;
@@ -77,6 +78,13 @@
     .team-grid {
         grid-template-columns: 1fr;
     }
+    .about-preview {
+        background-color: #d2e0ed;
+        max-width: 365px;
+        height: auto;
+        margin-top: 5px;
+    }
+   
 }
 
 /* Landscape orientation for mobile */
@@ -99,4 +107,6 @@
         padding: 0.5rem 1rem;
         font-size: 0.875rem;
     }
+   
+    
 }

@@ -3,9 +3,18 @@ fetch('data/places.json')
     .then(response => response.json())
     .then(places => {
         const gallery = document.querySelector('.gallery');
-        places.forEach(place => {
+        
+        places.forEach((place, index) => {
             const card = document.createElement('article');
             card.className = 'card';
+            
+            // Asigna un layout especial a ciertas tarjetas (ej: primera, última o una específica)
+            if (index === 0) {
+                card.classList.add('featured'); // Tarjeta destacada (área especial)
+            } else if (index === places.length - 1) {
+                card.classList.add('wide'); // Última tarjeta (ocupa más espacio)
+            }
+
             card.innerHTML = `
                 <h2>${place.name}</h2>
                 <figure>
@@ -23,8 +32,8 @@ fetch('data/places.json')
             `;
             gallery.appendChild(card);
         });
-    });
-
+    })
+    .catch(error => console.error('Error loading places data:', error));
     // nav hamburguer
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');

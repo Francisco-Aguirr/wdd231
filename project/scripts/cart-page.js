@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cartItemsContainer = document.getElementById('cart-items');
     const cartSubtotal = document.getElementById('cart-subtotal');
-    const cartShipping = document.getElementById('cart-shipping');
     const cartTotal = document.getElementById('cart-total');
 
     function renderCart() {
@@ -14,17 +13,29 @@ document.addEventListener('DOMContentLoaded', () => {
                     <a href="products.html" class="btn">Browse Products</a>
                 </div>
             `;
+            // Resetear los totales a 0 cuando el carrito está vacío
+            cartSubtotal.textContent = '$0.00';
+            cartTotal.textContent = '$0.00';
+            
+            // Actualizar contador del carrito si existe la función
+            if (typeof updateCartCount === 'function') {
+                updateCartCount();
+            }
             return;
         }
 
         cartItemsContainer.innerHTML = '';
-        
-        cart.forEach(item => {
+
+        cart.forEach((item, index) => {
             const cartItem = document.createElement('div');
             cartItem.className = 'cart-item';
+
+            // Primera imagen usa fetchpriority="high", el resto usa Intersection Observer
+            const loadingAttribute = index === 0 || item.image.priority ? 'fetchpriority="high"' : '';
+
             cartItem.innerHTML = `
                 <div class="cart-item-image">
-                    <img src="${item.image.src}" alt="${item.name}" loading="lazy">
+                    <img data-src="${item.image.src}" alt="${item.image.alt}" width="${item.image.width}" height="${item.image.height}" ${loadingAttribute}>
                 </div>
                 <div class="cart-item-details">
                     <h3>${item.name}</h3>
@@ -43,25 +54,45 @@ document.addEventListener('DOMContentLoaded', () => {
             cartItemsContainer.appendChild(cartItem);
         });
 
-        // Calculate totals
+        // Cargar imágenes cuando entren en pantalla con Intersection Observer
+        lazyLoadImages();
+
+        // Calcular totales
         const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
         const shipping = 10.00; // Flat rate shipping
         const total = subtotal + shipping;
-        
+
         cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
         cartTotal.textContent = `$${total.toFixed(2)}`;
-        
-        // Update cart count in header
+
+        // Actualizar contador del carrito si existe la función
         if (typeof updateCartCount === 'function') {
             updateCartCount();
         }
     }
 
-    // Event delegation for quantity buttons
+    function lazyLoadImages() {
+        const lazyImages = document.querySelectorAll('img[data-src]');
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        lazyImages.forEach(img => observer.observe(img));
+    }
+
+    // Delegación de eventos para los botones de cantidad y eliminación
     cartItemsContainer.addEventListener('click', (e) => {
         const target = e.target;
         const productId = target.dataset.id;
-        
+
         if (target.classList.contains('minus')) {
             window.cart.updateQuantity(productId, Math.max(1, window.cart.cart.find(item => item.id === productId).quantity - 1));
             renderCart();
@@ -74,6 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Initial render
+    // Render inicial del carrito
     renderCart();
 });
